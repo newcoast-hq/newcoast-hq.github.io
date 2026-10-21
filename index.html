@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewCoast — Партнёрские программы в финансовой вертикали</title>
-  <meta name="description" content="Разовое или регулярное сотрудничество в финансовой вертикали. Подберём вариант лично — с учётом твоих целей и времени.">
+  <title>NewCoast — Закрытая экосистема партнёрских программ</title>
+  <meta name="description" content="Элитное сотрудничество в финансовой вертикали. Разовые и регулярные форматы с персональным сопровождением.">
   <link rel="canonical" href="https://newcoast-hq.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #050505;
-      --bg-surface: #0c0a0b;
-      --bg-card: rgba(18, 14, 16, 0.85);
-      --border: rgba(212, 175, 55, 0.15);
-      --border-hover: rgba(212, 175, 55, 0.4);
-      --text: #f5f2eb;
-      --text-muted: #a39b93;
+      --bg: #030303;
+      --bg-surface: #0a0809;
+      --bg-card: rgba(14, 10, 12, 0.85);
+      --border: rgba(212, 175, 55, 0.18);
+      --border-hover: rgba(212, 175, 55, 0.5);
+      --text: #f3efe6;
+      --text-muted: #9e9589;
       --gold: #d4af37;
-      --gold-light: #f3e5ab;
-      --burgundy: #721422;
-      --burgundy-bright: #9e1b32;
-      --gold-glow: rgba(212, 175, 55, 0.25);
-      --burgundy-glow: rgba(114, 20, 34, 0.35);
-      --radius-lg: 24px;
-      --radius-md: 16px;
-      --radius-sm: 12px;
+      --gold-light: #f7e8b5;
+      --gold-dark: #aa8c2c;
+      --burgundy: #590d16;
+      --burgundy-bright: #800f1f;
+      --burgundy-glow: rgba(128, 15, 31, 0.4);
+      --gold-glow: rgba(212, 175, 55, 0.2);
+      --radius-lg: 20px;
+      --radius-md: 12px;
       --container: 1200px;
     }
 
@@ -40,23 +40,28 @@
       scroll-behavior: smooth;
       background-color: var(--bg);
       color: var(--text);
-      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.5;
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.6;
     }
 
     body {
       overflow-x: hidden;
       background:
-        radial-gradient(circle at 10% 15%, rgba(114, 20, 34, 0.22), transparent 40%),
-        radial-gradient(circle at 90% 25%, rgba(212, 175, 55, 0.12), transparent 35%),
-        radial-gradient(circle at 50% 90%, rgba(70, 10, 18, 0.18), transparent 50%),
+        radial-gradient(circle at 15% 10%, rgba(128, 15, 31, 0.28), transparent 45%),
+        radial-gradient(circle at 85% 25%, rgba(212, 175, 55, 0.12), transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(89, 13, 22, 0.2), transparent 50%),
         var(--bg);
+    }
+
+    h1, h2, h3, .brand-font {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.02em;
     }
 
     a {
       color: inherit;
       text-decoration: none;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
     }
 
     .container {
@@ -69,9 +74,9 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      backdrop-filter: blur(16px);
-      background: rgba(5, 5, 5, 0.88);
+      z-index: 1000;
+      backdrop-filter: blur(20px);
+      background: rgba(3, 3, 3, 0.9);
       border-bottom: 1px solid var(--border);
     }
 
@@ -79,78 +84,80 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 76px;
-      gap: 20px;
+      height: 80px;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      font-size: 1.25rem;
-      letter-spacing: -0.02em;
+      gap: 14px;
+      font-weight: 700;
+      font-size: 1.35rem;
     }
 
-    .logo-badge {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--burgundy), var(--gold));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 0.95rem;
-      color: #fff;
-      box-shadow: 0 6px 20px var(--burgundy-glow);
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--burgundy-bright), var(--gold-dark));
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      font-family: 'Cinzel', serif;
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 20px var(--burgundy-glow);
     }
 
     .logo span {
-      color: var(--gold);
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     nav.main-nav {
       display: flex;
-      align-items: center;
-      gap: 24px;
-      font-size: 0.92rem;
+      gap: 28px;
+      font-size: 0.9rem;
       color: var(--text-muted);
+      font-weight: 500;
     }
 
     nav.main-nav a:hover {
-      color: var(--gold-light);
+      color: var(--gold);
     }
 
+    /* BUTTONS */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 13px 24px;
+      padding: 14px 28px;
       border-radius: 999px;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 0.95rem;
       cursor: pointer;
       border: 1px solid transparent;
-      transition: all 0.22s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .btn-primary {
       background: linear-gradient(135deg, var(--burgundy-bright), var(--burgundy));
-      color: #fff;
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      box-shadow: 0 8px 26px var(--burgundy-glow);
+      color: var(--gold-light);
+      border-color: rgba(212, 175, 55, 0.4);
+      box-shadow: 0 10px 30px var(--burgundy-glow);
     }
 
     .btn-primary:hover {
-      background: linear-gradient(135deg, #b8223c, var(--burgundy-bright));
+      background: linear-gradient(135deg, #a51d31, var(--burgundy-bright));
       border-color: var(--gold);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(128, 15, 31, 0.6);
     }
 
     .btn-outline {
-      background: rgba(212, 175, 55, 0.04);
+      background: rgba(212, 175, 55, 0.03);
       border-color: var(--border);
       color: var(--text);
     }
@@ -163,251 +170,214 @@
 
     /* SECTIONS */
     section {
-      padding: 88px 0;
+      padding: 100px 0;
       border-bottom: 1px solid var(--border);
+      position: relative;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       font-size: 0.78rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.2em;
       color: var(--gold);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .eyebrow::before {
       content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      transform: rotate(45deg);
       background: var(--gold);
-      box-shadow: 0 0 10px var(--gold);
+      box-shadow: 0 0 12px var(--gold);
     }
 
     h1 {
-      font-size: clamp(2.8rem, 6vw, 4.8rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1.02;
-      margin-bottom: 20px;
+      font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+      font-weight: 700;
+      line-height: 1.05;
+      margin-bottom: 24px;
     }
 
     h1 span, h2 span {
-      color: var(--gold);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), #9e7b1a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     h2 {
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.12;
-      margin-bottom: 16px;
-    }
-
-    h3 {
-      font-size: 1.45rem;
+      font-size: clamp(2.2rem, 4.2vw, 3.4rem);
       font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
+      line-height: 1.15;
+      margin-bottom: 20px;
     }
 
     .lead {
       font-size: 1.15rem;
       color: var(--text-muted);
-      max-width: 580px;
+      max-width: 600px;
+      font-weight: 300;
     }
 
     /* HERO */
     .hero-grid {
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
-      gap: 40px;
+      gap: 50px;
       align-items: center;
     }
 
     .hero-subtitle {
-      font-size: clamp(1.35rem, 2.4vw, 1.85rem);
-      font-weight: 700;
-      margin-bottom: 16px;
-      line-height: 1.25;
-    }
-
-    .hero-actions {
-      margin-top: 28px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-    }
-
-    .hero-note {
-      margin-top: 18px;
-      font-size: 0.88rem;
-      color: var(--text-muted);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: #ede6d6;
     }
 
     .hero-card {
-      background: linear-gradient(160deg, var(--bg-card), var(--bg-surface));
+      background: linear-gradient(145deg, var(--bg-card), var(--bg-surface));
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 32px;
+      padding: 36px;
       position: relative;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
     }
 
-    .hero-card-tag {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--gold);
-      margin-bottom: 24px;
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      pointer-events: none;
     }
 
     .hero-visual {
-      height: 240px;
+      height: 250px;
       border-radius: var(--radius-md);
       background:
-        radial-gradient(circle at 30% 30%, rgba(114, 20, 34, 0.4), transparent 65%),
-        linear-gradient(135deg, #18080c 0%, #080506 100%);
+        radial-gradient(circle at 40% 40%, rgba(128, 15, 31, 0.5), transparent 70%),
+        linear-gradient(135deg, #150508 0%, #050303 100%);
       border: 1px solid var(--border);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08), transparent 80%);
     }
 
     .hero-visual-title {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-size: 2.2rem;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
     }
 
-    .hero-visual-title span {
-      color: var(--gold);
-    }
-
-    .hero-quicklinks {
-      margin-top: 36px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .pill-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .pill {
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: var(--bg-surface);
+    /* CARDS & CONTAINERS */
+    .glass-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
       border: 1px solid var(--border);
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      transition: all 0.3s ease;
     }
 
-    .pill:hover {
-      color: var(--gold-light);
-      border-color: var(--gold);
+    .glass-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     }
 
     /* QUIZ SECTION */
     .quiz-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
-      gap: 40px;
+      gap: 50px;
       align-items: start;
     }
 
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 32px;
-    }
-
     .quiz-step {
-      margin-bottom: 22px;
+      margin-bottom: 26px;
     }
 
     .quiz-step-label {
-      font-size: 0.85rem;
-      font-weight: 700;
+      font-size: 0.88rem;
+      font-weight: 600;
       color: var(--text-muted);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       display: block;
     }
 
     .quiz-options {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
     }
 
     .quiz-option {
-      padding: 12px 16px;
-      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
       background: var(--bg-surface);
       border: 1px solid var(--border);
       color: var(--text);
       font-family: inherit;
-      font-size: 0.9rem;
-      font-weight: 600;
+      font-size: 0.92rem;
+      font-weight: 500;
       text-align: left;
       cursor: pointer;
-      transition: all 0.18s ease;
+      transition: all 0.2s ease;
     }
 
     .quiz-option:hover {
       border-color: var(--gold);
-    }
-
-    .quiz-option.active {
-      background: rgba(114, 20, 34, 0.25);
-      border-color: var(--gold);
       color: var(--gold-light);
     }
 
+    .quiz-option.active {
+      background: rgba(128, 15, 31, 0.3);
+      border-color: var(--gold);
+      color: var(--gold-light);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+    }
+
     .quiz-result {
-      margin-top: 24px;
-      padding: 24px;
+      margin-top: 28px;
+      padding: 28px;
       border-radius: var(--radius-md);
-      background: rgba(114, 20, 34, 0.15);
+      background: linear-gradient(135deg, rgba(128, 15, 31, 0.2), rgba(14, 10, 12, 0.9));
       border: 1px solid var(--gold);
       display: none;
+      box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.08);
     }
 
     .quiz-result.visible {
       display: block;
+      animation: fadeIn 0.4s ease;
     }
 
-    /* ABOUT & STATS */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* STATS & ABOUT */
     .split-grid {
       display: grid;
       grid-template-columns: 1fr 1.1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    .text-stack p {
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      font-size: 1.05rem;
+      gap: 50px;
+      margin-bottom: 45px;
     }
 
     .stats-grid {
@@ -420,236 +390,198 @@
       background: var(--bg-surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 24px;
+      padding: 28px;
+      border-left: 3px solid var(--gold);
     }
 
     .stat-card strong {
       display: block;
-      font-size: 2rem;
-      font-weight: 800;
+      font-size: 2.2rem;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
       color: var(--gold);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
-    .stat-card span {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-    }
-
-    /* PARTNERS */
+    /* BRANDS / PARTNERS */
     .brands-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      margin-top: 32px;
+      margin-top: 36px;
     }
 
     .brand-item {
-      height: 110px;
+      height: 120px;
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
       color: var(--text);
+    }
+
+    .brand-item span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-family: 'Manrope', sans-serif;
+      margin-top: 6px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     /* FORMATS */
     .formats-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 36px;
+      gap: 28px;
+      margin-top: 40px;
     }
 
     .format-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 36px;
+      padding: 40px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .format-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
-
     .format-list {
       list-style: none;
-      margin: 24px 0;
+      margin: 28px 0;
     }
 
     .format-list li {
       position: relative;
-      padding-left: 22px;
-      margin-bottom: 10px;
+      padding-left: 24px;
+      margin-bottom: 12px;
       color: var(--text-muted);
     }
 
     .format-list li::before {
-      content: "•";
+      content: "—";
       position: absolute;
-      left: 4px;
+      left: 0;
       color: var(--gold);
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .benchmarks-box {
-      margin-top: 28px;
-      background: linear-gradient(135deg, rgba(114, 20, 34, 0.2), var(--bg-surface));
+      margin-top: 32px;
+      background: linear-gradient(145deg, rgba(128, 15, 31, 0.25), var(--bg-surface));
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 36px;
+      padding: 42px;
     }
 
     .benchmarks-numbers {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin: 24px 0;
+      gap: 30px;
+      margin: 28px 0;
     }
 
     .benchmark-val {
-      font-size: clamp(1.8rem, 3.5vw, 2.75rem);
-      font-weight: 800;
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
       color: var(--gold);
       display: block;
-    }
-
-    .benchmark-sub {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .disclaimer {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      opacity: 0.8;
     }
 
     /* CONDITIONS */
     .conditions-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 36px;
+      gap: 22px;
+      margin-top: 40px;
     }
 
     .condition-item {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 26px;
+      padding: 30px;
     }
 
     .condition-item dt {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
-      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
     }
 
     .condition-item dd {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 8px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
       color: var(--gold-light);
-    }
-
-    .condition-item p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
+      margin-bottom: 10px;
     }
 
     /* STEPS & FAQ */
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      margin-top: 36px;
+      gap: 20px;
+      margin-top: 40px;
     }
 
     .step-card {
       background: var(--bg-surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 24px;
+      padding: 28px;
     }
 
-    .step-num {
-      font-size: 0.8rem;
-      font-weight: 800;
-      color: var(--gold);
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .faq-list {
-      margin-top: 32px;
+    .faq-stack {
+      margin-top: 36px;
       display: grid;
-      gap: 14px;
+      gap: 16px;
     }
 
-    details.faq-item {
+    details.faq-box {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 20px 24px;
+      padding: 22px 28px;
     }
 
-    details.faq-item summary {
-      font-weight: 700;
-      font-size: 1.05rem;
+    details.faq-box summary {
+      font-weight: 600;
+      font-size: 1.1rem;
       cursor: pointer;
       list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-family: 'Cinzel', serif;
     }
 
-    details.faq-item p {
-      margin-top: 12px;
+    details.faq-box p {
+      margin-top: 14px;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.96rem;
     }
 
     footer {
-      padding: 56px 0;
+      padding: 60px 0;
       color: var(--text-muted);
       font-size: 0.88rem;
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 24px;
-      align-items: center;
+      border-top: 1px solid var(--border);
+      background: var(--bg-surface);
     }
 
     @media (max-width: 920px) {
-      .hero-grid,
-      .quiz-grid,
-      .split-grid,
-      .formats-grid,
-      .conditions-grid,
-      .steps-grid,
-      .stats-grid,
-      .brands-grid,
-      .benchmarks-numbers {
+      .hero-grid, .quiz-grid, .split-grid, .formats-grid, .conditions-grid, .steps-grid, .stats-grid, .brands-grid, .benchmarks-numbers {
         grid-template-columns: 1fr;
       }
       nav.main-nav {
@@ -662,68 +594,56 @@
 
   <header>
     <div class="container header-inner">
-      <a href="#top" class="logo" aria-label="NewCoast — в начало">
-        <div class="logo-badge">NC</div>
+      <a href="#top" class="logo">
+        <div class="logo-mark">NC</div>
         <div>NEW<span>COAST</span></div>
       </a>
-      <nav class="main-nav" aria-label="Основная навигация">
+      <nav class="main-nav">
         <a href="#project">О проекте</a>
         <a href="#partners">Партнёры</a>
-        <a href="#cooperation">Сотрудничество</a>
+        <a href="#cooperation">Форматы</a>
         <a href="#conditions">Условия</a>
-        <a href="#process">Маршрут</a>
         <a href="#cases">Кейсы</a>
         <a href="#faq">Вопросы</a>
       </nav>
-      <div>
-        <a href="https://t.me/p2ppatrick" target="_blank" rel="noopener noreferrer" class="btn btn-primary">На связи</a>
-      </div>
+      <a href="https://t.me/p2ppatrick" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Связаться</a>
     </div>
   </header>
 
-  <main id="main">
+  <main>
     <!-- HERO -->
     <section>
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <p class="eyebrow">ПАРТНЁРСКИЕ ПРОГРАММЫ / РОССИЯ</p>
-            <h1>NEW<span>COAST</span></h1>
-            <p class="hero-subtitle">Твой формат.<br>Твои возможности.</p>
-            <p class="lead">Разовое или регулярное сотрудничество в финансовой вертикали. Подберём вариант лично — с учётом твоих целей и времени.</p>
-            <div class="hero-actions">
-              <a href="https://t.me/p2ppatrick" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Обсудить сотрудничество <span aria-hidden="true">→</span></a>
-              <a href="#format-picker" class="btn btn-outline">Подобрать формат <span aria-hidden="true">↓</span></a>
-            </div>
-            <p class="hero-note">Бесплатная консультация · Индивидуальный подход</p>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">ЗАКРЫТАЯ ЭКОСИСТЕМА / РОССИЯ</div>
+          <h1>NEW<span>COAST</span></h1>
+          <p class="hero-subtitle">Высокий стандарт. Безупречные возможности.</p>
+          <p class="lead">Элитное разовое и регулярное сотрудничество в финансовой вертикали. Подбираем персональные стратегии с учётом ваших целей и времени.</p>
+          <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 16px;">
+            <a href="https://t.me/p2ppatrick" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Обсудить сотрудничество →</a>
+            <a href="#format-picker" class="btn btn-outline">Подобрать формат ↓</a>
           </div>
-
-          <figure class="hero-card">
-            <div class="hero-card-tag">
-              <span>ПЛАТФОРМА ПРОЕКТА</span>
-              <span>NEWCOAST</span>
-            </div>
-            <div class="hero-visual">
-              <div class="hero-visual-title">NEW<span>COAST</span></div>
-              <span style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">ФИНАНСОВАЯ ВЕРТИКАЛЬ</span>
-            </div>
-            <figcaption>
-              <strong style="display:block; font-size:1.1rem; color: var(--gold-light);">Команда сопровождения</strong>
-              <span style="color: var(--text-muted); font-size: 0.9rem;">Консультация и личная поддержка после старта</span>
-            </figcaption>
-          </figure>
+          <div style="margin-top: 24px; font-size: 0.88rem; color: var(--text-muted); display:flex; gap:20px; flex-wrap:wrap;">
+            <span>✦ Конфиденциально</span>
+            <span>✦ Без опыта</span>
+            <span>✦ Достаточно телефона</span>
+          </div>
         </div>
 
-        <div class="hero-quicklinks">
-          <div class="pill-links">
-            <a href="#format-picker" class="pill">Подобрать формат ↓</a>
-            <a href="#cooperation" class="pill">Форматы работы</a>
-            <a href="#cases" class="pill">Кейсы участников</a>
-            <a href="#faq" class="pill">Частые вопросы</a>
+        <div class="hero-card">
+          <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; letter-spacing:0.15em; color:var(--gold); margin-bottom:20px;">
+            <span>PRIVATE PLATFORM</span>
+            <span>NEWCOAST // 2026</span>
           </div>
-          <div class="pill-links">
-            <span class="pill">17–28 лет / без опыта</span>
-            <span class="pill">Достаточно телефона</span>
+          <div class="hero-visual">
+            <div class="hero-visual-title">NEW<span>COAST</span></div>
+            <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; letter-spacing: 0.1em;">FINANCIAL VERTICAL</span>
+          </div>
+          <div style="border-top: 1px solid var(--border); padding-top: 18px; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <strong style="display:block; font-family:'Cinzel',serif; color:var(--gold-light);">Личное ведение</strong>
+              <small style="color:var(--text-muted);">От первой консультации до результата</small>
+            </div>
           </div>
         </div>
       </div>
@@ -733,281 +653,220 @@
     <section id="format-picker">
       <div class="container quiz-grid">
         <div>
-          <p class="eyebrow">ТВОЙ СТАРТ / ТРИ ВОПРОСА</p>
-          <h2>С чего<br>начнём?</h2>
-          <p class="lead">Ответь на три вопроса — получишь предварительный вариант для обсуждения на консультации.</p>
-          <p style="margin-top:12px; font-size:0.85rem; color:var(--text-muted);">Ответы остаются в этой вкладке.</p>
+          <div class="eyebrow">ПЕРСОНАЛЬНЫЙ ВЫБОР</div>
+          <h2>С чего<br><span>начнём?</span></h2>
+          <p class="lead">Ответьте на три вопроса — система сформирует оптимальный формат для закрытого обсуждения.</p>
         </div>
 
-        <div class="card">
+        <div class="glass-card">
           <div class="quiz-step">
-            <span class="quiz-step-label">1. Сколько времени готов уделять?</span>
-            <div class="quiz-options" data-question="time">
-              <button type="button" class="quiz-option" data-val="once">Разово (1–2 часа)</button>
-              <button type="button" class="quiz-option" data-val="regular">2–3 часа каждый вечер</button>
+            <span class="quiz-step-label">1. Сколько времени готовы уделять?</span>
+            <div class="quiz-options" data-q="time">
+              <button type="button" class="quiz-option" data-val="Разово (1–2 часа)">Разово (1–2 часа)</button>
+              <button type="button" class="quiz-option" data-val="Регулярно (вечером)">2–3 часа вечером</button>
             </div>
           </div>
 
           <div class="quiz-step">
-            <span class="quiz-step-label">2. Был ли опыт в партнёрских программах?</span>
-            <div class="quiz-options" data-question="exp">
-              <button type="button" class="quiz-option" data-val="no">Нет, начинаю с нуля</button>
-              <button type="button" class="quiz-option" data-val="yes">Да, уже пробовал</button>
+            <span class="quiz-step-label">2. Есть ли опыт в финансовой вертикали?</span>
+            <div class="quiz-options" data-q="exp">
+              <button type="button" class="quiz-option" data-val="Без опыта">Начинаю с нуля</button>
+              <button type="button" class="quiz-option" data-val="Есть опыт">Уже участвовал</button>
             </div>
           </div>
 
           <div class="quiz-step">
-            <span class="quiz-step-label">3. Какая цель сейчас ближе?</span>
-            <div class="quiz-options" data-question="goal">
-              <button type="button" class="quiz-option" data-val="fast">Быстрый результат с одного действия</button>
-              <button type="button" class="quiz-option" data-val="scale">Регулярный доход и рост</button>
+            <span class="quiz-step-label">3. Какой приоритет по результату?</span>
+            <div class="quiz-options" data-q="goal">
+              <button type="button" class="quiz-option" data-val="Быстрая разовая выплата">Быстрая разовая выплата</button>
+              <button type="button" class="quiz-option" data-val="Системный рост дохода">Регулярный рост дохода</button>
             </div>
           </div>
 
-          <div id="quiz-result" class="quiz-result">
-            <p class="eyebrow" style="margin-bottom:8px;">ВАРИАНТ ДЛЯ ОБСУЖДЕНИЯ</p>
-            <h3 id="quiz-result-title" style="color: var(--gold-light);">Рекомендуемый формат</h3>
-            <p id="quiz-result-desc" style="color:var(--text-muted); margin-bottom:12px;"></p>
-            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:18px;">Окончательный формат и условия определим на личной консультации.</p>
-            <a id="quiz-tg-btn" href="https://t.me/p2ppatrick" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Обсудить на консультации</a>
+          <div id="quiz-output" class="quiz-result">
+            <div class="eyebrow" style="margin-bottom:6px;">РЕКОМЕНДАЦИЯ СИСТЕМЫ</div>
+            <h3 id="quiz-title" style="font-family:'Cinzel',serif; color:var(--gold-light); margin-bottom:8px;">Формат определён</h3>
+            <p id="quiz-desc" style="color:var(--text-muted); font-size:0.94rem; margin-bottom:18px;"></p>
+            <a id="quiz-tg-btn" href="https://t.me/p2ppatrick" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;">Перейти в Telegram для утверждения →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 01 / ЗНАКОМСТВО (БЕЗ ЛЮДЕЙ И БИОГРАФИЙ) -->
+    <!-- ABOUT -->
     <section id="project">
       <div class="container">
-        <p class="eyebrow">01 / О ПРОЕКТЕ</p>
+        <div class="eyebrow">01 / О ПРОЕКТЕ</div>
         <div class="split-grid">
           <div>
-            <h2>Система.<br>Возможности.<br><span>NewCoast.</span></h2>
+            <h2>Принципы.<br>Капитал.<br><span>NewCoast.</span></h2>
           </div>
-          <div class="text-stack">
-            <p><strong>NewCoast</strong> — проект для сотрудничества по партнёрским программам в финансовой вертикали.</p>
-            <p>Мы выстроили эффективную внутреннюю инфраструктуру и работаем с проверенными офферами. Постоянно изучаем смежные направления и делимся с участниками практическим опытом.</p>
-            <p>Первую консультацию проводим индивидуально: узнаем тебя, твои цели и возможности. Затем предлагаем подходящий формат и лично сопровождаем после старта.</p>
+          <div style="color: var(--text-muted); font-size: 1.05rem; display: grid; gap: 16px;">
+            <p><strong style="color: var(--text);">NewCoast</strong> — закрытая платформа для сотрудничества по премиальным партнёрским программам в финансовой нише.</p>
+            <p>Мы выстроили чёткие алгоритмы взаимодействия, собственный отдел продаж и безопасную инфраструктуру. Никаких лишних действий — только проверенные на практике связки.</p>
+            <p>Первый контакт проходит в формате конфиденциальной консультации: обсуждаем ваши цели, свободное время и утверждаем формат работы.</p>
           </div>
         </div>
 
         <div class="stats-grid">
           <div class="stat-card">
-            <strong>Практика</strong>
-            <span>в финансовой вертикали</span>
+            <strong>3+ года</strong>
+            <span>опыта в финансовой вертикали</span>
           </div>
           <div class="stat-card">
-            <strong>Лично</strong>
-            <span>от консультации до сопровождения</span>
+            <strong>Конфиденциально</strong>
+            <span>индивидуальное ведение лид-менеджером</span>
           </div>
           <div class="stat-card">
-            <strong>Команда</strong>
-            <span>опытных кураторов и поддержка</span>
+            <strong>Закрытый пул</strong>
+            <span>активных участников и кураторов</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ПАРТНЁРСКИЕ ПРОГРАММЫ -->
+    <!-- PARTNERS -->
     <section id="partners">
       <div class="container">
-        <div class="split-grid" style="margin-bottom:0;">
+        <div class="split-grid" style="margin-bottom: 0;">
           <div>
-            <p class="eyebrow">ПАРТНЁРСКИЕ ПРОГРАММЫ</p>
-            <h2>Компании,<br>с которыми работаем.</h2>
+            <div class="eyebrow">ПАРТНЁРСКАЯ СЕТЬ</div>
+            <h2>Ключевые<br>институты.</h2>
           </div>
           <div>
-            <p class="lead">Предложения компаний доступны через официальные партнёрские программы.</p>
+            <p class="lead">Работаем исключительно с ведущими игроками финансового рынка через защищённые партнёрские шлюзы.</p>
           </div>
         </div>
 
         <div class="brands-grid">
-          <div class="brand-item">Альфа-Банк</div>
-          <div class="brand-item">ВТБ</div>
-          <div class="brand-item">Яндекс</div>
+          <div class="brand-item">Альфа-Банк<span>Официальный партнёр</span></div>
+          <div class="brand-item">ВТБ<span>Официальный партнёр</span></div>
+          <div class="brand-item">Яндекс<span>Экосистема</span></div>
         </div>
       </div>
     </section>
 
-    <!-- 02 / ВАРИАНТЫ СОТРУДНИЧЕСТВА -->
+    <!-- FORMATS -->
     <section id="cooperation">
       <div class="container">
-        <p class="eyebrow">02 / ВАРИАНТЫ СОТРУДНИЧЕСТВА</p>
-        <h2>Как тебе<br>удобнее?</h2>
-        <p class="lead">Начать с одного действия или включиться регулярно — обсудим оба варианта.</p>
+        <div class="eyebrow">02 / ФОРМАТЫ УЧАСТИЯ</div>
+        <h2>Выберите свой<br><span>вектор.</span></h2>
+        <p class="lead">Разовое целевое действие или масштабное регулярное развитие.</p>
 
         <div class="formats-grid">
-          <article class="format-card">
+          <div class="format-card">
             <div>
-              <div class="format-header">
-                <span>Разовый формат</span>
-                <span>01</span>
-              </div>
-              <h3>Один раз.<br>С результатом.</h3>
-              <p style="color:var(--text-muted);">Выполни одно согласованное целевое действие по условиям партнёрской программы.</p>
+              <div class="eyebrow">ВАРИАНТ А</div>
+              <h3 style="font-family:'Cinzel',serif; margin-bottom:12px;">Разовый формат</h3>
+              <p style="color:var(--text-muted);">Выполнение одного согласованного целевого действия по регламенту программы.</p>
               <ul class="format-list">
-                <li>Без постоянной занятости</li>
-                <li>Выплата сразу после выполнения</li>
-                <li>Задание и сумма — на консультации</li>
+                <li>Без обязательств и графиков</li>
+                <li>Быстрая выплата сразу после верификации</li>
+                <li>Ориентир первой недели: 15 000 – 20 000 ₽</li>
               </ul>
             </div>
-            <a href="#conditions" class="btn btn-outline">Подробнее о формате <span aria-hidden="true">↓</span></a>
-          </article>
+            <a href="https://t.me/p2ppatrick" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width:100%;">Обсудить разовый старт</a>
+          </div>
 
-          <article class="format-card">
+          <div class="format-card" style="border-color: rgba(212, 175, 55, 0.4);">
             <div>
-              <div class="format-header">
-                <span>Регулярный формат</span>
-                <span>02</span>
-              </div>
-              <h3>Включайся.<br>Развивайся.</h3>
-              <p style="color:var(--text-muted);">Сотрудничество для тех, кто готов уделять проекту время каждый день.</p>
+              <div class="eyebrow">ВАРИАНТ Б</div>
+              <h3 style="font-family:'Cinzel',serif; margin-bottom:12px;">Регулярный формат</h3>
+              <p style="color:var(--text-muted);">Системная работа для тех, кто готов уделять проекту по 2–3 часа каждый вечер.</p>
               <ul class="format-list">
-                <li>2–3 часа в день, вечером</li>
-                <li>Выбор часов в пределах вечера</li>
-                <li>Личное сопровождение и карьерный рост</li>
+                <li>Пошаговое обучение и кураторство</li>
+                <li>Гибкое распределение времени вечером</li>
+                <li>Карьерный рост до управления процессами</li>
               </ul>
             </div>
-            <a href="#conditions" class="btn btn-outline">Подробнее о формате <span aria-hidden="true">↓</span></a>
-          </article>
+            <a href="https://t.me/p2ppatrick" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;">Выбрать регулярный формат</a>
+          </div>
         </div>
 
         <div class="benchmarks-box">
-          <p class="eyebrow">ОРИЕНТИРЫ РЕГУЛЯРНОГО ФОРМАТА</p>
-          <h3 style="color: var(--gold-light);">Есть куда расти.</h3>
+          <div class="eyebrow">ФИНАНСОВЫЕ ОРИЕНТИРЫ</div>
+          <h3 style="font-family:'Cinzel',serif;">Перспектива роста в регулярном формате</h3>
           <div class="benchmarks-numbers">
             <div>
               <strong class="benchmark-val">100 000 ₽</strong>
-              <span class="benchmark-sub">начальный целевой ориентир — от этой суммы</span>
+              <span style="color:var(--text-muted); font-size:0.9rem;">начальный ориентир от этой суммы</span>
             </div>
             <div>
               <strong class="benchmark-val">300 000 ₽+</strong>
-              <span class="benchmark-sub">перспектива роста</span>
+              <span style="color:var(--text-muted); font-size:0.9rem;">масштабирование и рост дохода</span>
             </div>
           </div>
-          <p class="disclaimer">Суммы — ориентиры проекта, а не гарантированный доход. Период расчёта, задачи и порядок выплат обсуждаем до начала участия. Результат зависит от партнёрской программы и выполненной работы.</p>
+          <p style="font-size:0.82rem; color:var(--text-muted);">Все цифры являются ориентирами проекта, зависят от продуктивности и условий партнёрских программ. Условия фиксируются до старта.</p>
         </div>
       </div>
     </section>
 
-    <!-- 03 / УСЛОВИЯ СТАРТА -->
+    <!-- CONDITIONS -->
     <section id="conditions">
       <div class="container">
-        <p class="eyebrow">03 / УСЛОВИЯ СТАРТА</p>
-        <h2>Всё главное.<br><span>До звонка.</span></h2>
-        <p class="lead">Детали выбранной программы обсудим лично. Здесь — базовые условия участия.</p>
-
-        <dl class="conditions-grid">
+        <div class="eyebrow">03 / УСЛОВИЯ УЧАСТИЯ</div>
+        <h2>Базовые<br>критерии.</h2>
+        <div class="conditions-grid">
           <div class="condition-item">
-            <dt>Возраст участников</dt>
-            <dd>17–28<span> лет</span></dd>
+            <dt>Возрастной ценз</dt>
+            <dd>17–28 лет</dd>
+            <p style="color:var(--text-muted); font-size:0.88rem;">Оптимальный диапазон для эффективной работы.</p>
           </div>
           <div class="condition-item">
-            <dt>География</dt>
+            <dt>Регион</dt>
             <dd>Россия</dd>
-            <p>Участники из России.</p>
+            <p style="color:var(--text-muted); font-size:0.88rem;">Инфраструктура ориентирована на рынок РФ.</p>
           </div>
           <div class="condition-item">
-            <dt>Предыдущий опыт</dt>
+            <dt>Опыт работы</dt>
             <dd>Не нужен</dd>
-            <p>Варианты для старта обсудим на консультации.</p>
+            <p style="color:var(--text-muted); font-size:0.88rem;">Предоставляем готовые регламенты и инструкции.</p>
           </div>
           <div class="condition-item">
-            <dt>Из техники</dt>
+            <dt>Оборудование</dt>
             <dd>Телефон</dd>
-            <p>Компьютер не обязателен.</p>
+            <p style="color:var(--text-muted); font-size:0.88rem;">Компьютер не обязателен для старта.</p>
           </div>
           <div class="condition-item">
-            <dt>Регулярная занятость</dt>
+            <dt>Занятость</dt>
             <dd>2–3 часа</dd>
-            <p>Каждый день, в вечернее время. Часы внутри вечера выбираешь самостоятельно.</p>
+            <p style="color:var(--text-muted); font-size:0.88rem;">Вечернее время на ваше усмотрение.</p>
           </div>
           <div class="condition-item">
-            <dt>Формат участия</dt>
-            <dd>Работа на себя</dd>
-            <p>Партнёрские программы, в том числе в статусе самозанятого. Условия обсуждаем индивидуально.</p>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- МАРШРУТ -->
-    <section>
-      <div class="container">
-        <p class="eyebrow">ТВОЙ МАРШРУТ / ПОСЛЕ ЗВОНКА</p>
-        <h2>Как выглядят<br>первые недели?</h2>
-        <p class="lead">У каждого формата свой темп. Подробности и условия согласуем перед началом сотрудничества.</p>
-
-        <div class="formats-grid" style="margin-top: 36px;">
-          <article class="card">
-            <span class="step-num">01 / РАЗОВЫЙ ФОРМАТ</span>
-            <h3 style="color: var(--gold-light);">Попробовать и определиться</h3>
-            <p style="color:var(--text-muted);">Согласованное действие, выплата и решение о продолжении. Ориентир для первой недели — 15–20 тысяч рублей; сумма и срок зависят от условий программы и не гарантированы.</p>
-          </article>
-          <article class="card">
-            <span class="step-num">02 / РЕГУЛЯРНЫЙ ФОРМАТ</span>
-            <h3 style="color: var(--gold-light);">Учиться и расти в практике</h3>
-            <p style="color:var(--text-muted);">Материалы и постепенное включение в работу. Ориентир первых выплат — около двух недель, без гарантии срока. Дальше можно развивать навыки и учиться организовывать процессы.</p>
-          </article>
-        </div>
-
-        <div style="margin-top: 64px;">
-          <p class="eyebrow">04 / КАК НАЧИНАЕМ</p>
-          <h2>Сначала знакомство.<br>Дальше — по делу.</h2>
-          <div class="steps-grid">
-            <div class="step-card">
-              <span class="step-num">ШАГ 01</span>
-              <h3 style="font-size: 1.1rem; color: var(--gold-light);">Заявка в Telegram</h3>
-              <p style="color:var(--text-muted); font-size:0.92rem;">Напиши в личные сообщения, чтобы выбрать удобное время для связи.</p>
-            </div>
-            <div class="step-card">
-              <span class="step-num">ШАГ 02</span>
-              <h3 style="font-size: 1.1rem; color: var(--gold-light);">Консультация</h3>
-              <p style="color:var(--text-muted); font-size:0.92rem;">Короткий созвон: обсуждаем твои задачи, время и подбираем формат.</p>
-            </div>
-            <div class="step-card">
-              <span class="step-num">ШАГ 03</span>
-              <h3 style="font-size: 1.1rem; color: var(--gold-light);">Пошаговый старт</h3>
-              <p style="color:var(--text-muted); font-size:0.92rem;">Получаешь доступ к материалам, регламентам и целевым действиям.</p>
-            </div>
-            <div class="step-card">
-              <span class="step-num">ШАГ 04</span>
-              <h3 style="font-size: 1.1rem; color: var(--gold-light);">Сопровождение</h3>
-              <p style="color:var(--text-muted); font-size:0.92rem;">Поддержка куратора до получения выплаты и переход к масштабированию.</p>
-            </div>
+            <dt>Формат</dt>
+            <dd>Самозанятость</dd>
+            <p style="color:var(--text-muted); font-size:0.88rem;">Работа на себя по партнёрским соглашениям.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- КЕЙСЫ (БЕЗ ЛЮДЕЙ) -->
+    <!-- CASES -->
     <section id="cases">
       <div class="container">
-        <p class="eyebrow">05 / КЕЙСЫ И РЕЗУЛЬТАТЫ</p>
-        <h2>Примеры прохождения<br>маршрута в NewCoast.</h2>
-        <p class="lead">Реальные сценарии участия от первых шагов до регулярного формата.</p>
-
-        <div class="formats-grid">
-          <article class="card">
-            <span class="step-num">КЕЙС #1 / БЫСТРЫЙ СТАРТ</span>
-            <h3 style="color: var(--gold-light);">Переход от разового к регулярному</h3>
-            <p style="color:var(--text-muted); margin-bottom:14px;">Старт без опыта в финансовой вертикали по вечерам (около 2,5 часов в сутки).</p>
+        <div class="eyebrow">04 / КЕЙСЫ УЧАСТНИКОВ</div>
+        <h2>Примеры<br>маршрутов.</h2>
+        <div class="formats-grid" style="margin-top: 36px;">
+          <div class="glass-card">
+            <div class="eyebrow">КЕЙС №1 / С НУЛЯ</div>
+            <h3 style="font-family:'Cinzel',serif; margin-bottom:12px;">Быстрый старт с телефона</h3>
+            <p style="color:var(--text-muted); margin-bottom:16px;">Совмещение с учебой, выполнение задач в вечернее время (до 2.5 часов).</p>
             <ul class="format-list">
-              <li>Первая неделя: закрытие базовых целевых действий (~18 000 ₽)</li>
-              <li>Первый месяц регулярного формата: выход на планку 95 000+ ₽</li>
-              <li>Постепенное освоение новых направлений</li>
+              <li>Первая неделя: выполнение базового оффера (~18 500 ₽)</li>
+              <li>Переход в регулярный формат сопровождения</li>
+              <li>Выход на стабильные 110 000 ₽+ на второй месяц</li>
             </ul>
-          </article>
-
-          <article class="card">
-            <span class="step-num">КЕЙС #2 / КОМАНДНЫЙ РОСТ</span>
-            <h3 style="color: var(--gold-light);">Масштабирование процессов</h3>
-            <p style="color:var(--text-muted); margin-bottom:14px;">Фокус на регулярной работе и организации процессов внутри партнёрских программ.</p>
+          </div>
+          <div class="glass-card">
+            <div class="eyebrow">КЕЙС №2 / МАСШТАБ</div>
+            <h3 style="font-family:'Cinzel',serif; margin-bottom:12px;">Организация процессов</h3>
+            <p style="color:var(--text-muted); margin-bottom:16px;">Фокус на регулярной работе и курировании участников внутри системы.</p>
             <ul class="format-list">
-              <li>Стабильное выполнение вечерних нормативов</li>
-              <li>Изучение регламентов работы с трафиком</li>
-              <li>Выход на целевые ориентиры проекта от 150 000 ₽ и выше</li>
+              <li>Первые выплаты в регулярном формате через 14 дней</li>
+              <li>Глубокое изучение регламентов трафика</li>
+              <li>Достижение показателей от 250 000 ₽ и выше</li>
             </ul>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -1015,84 +874,77 @@
     <!-- FAQ -->
     <section id="faq">
       <div class="container">
-        <p class="eyebrow">06 / ЧАСТЫЕ ВОПРОСЫ</p>
-        <h2>Ответы до старта.</h2>
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>Нужны ли вложения для старта? <span style="color: var(--gold);">+</span></summary>
-            <p>Консультация и старт в проекте бесплатны. Все условия выбранной партнёрской программы прозрачно обсуждаются до начала любых действий.</p>
+        <div class="eyebrow">05 / ВОПРОСЫ И ОТВЕТЫ</div>
+        <h2>Частые<br>уточнения.</h2>
+        <div class="faq-stack">
+          <details class="faq-box">
+            <summary>Требуются ли денежные вложения? <span>+</span></summary>
+            <p>Абсолютно нет. Участие, консультация и обучающие материалы предоставляются без каких-либо оплат со стороны участников.</p>
           </details>
-          <details class="faq-item">
-            <summary>Подойдёт ли, если совсем нет опыта? <span style="color: var(--gold);">+</span></summary>
-            <p>Да, большинство участников начинают с нуля. Мы даем готовые инструкции и сопровождаем на каждом этапе.</p>
+          <details class="faq-box">
+            <summary>Как быстро поступают выплаты? <span>+</span></summary>
+            <p>В разовом формате расчёт происходит сразу после проверки целевого действия банком-партнёром. В регулярном — по согласованному графику выплат.</p>
           </details>
-          <details class="faq-item">
-            <summary>Можно ли совмещать с учёбой или основной работой? <span style="color: var(--gold);">+</span></summary>
-            <p>Да. Разовый формат не требует постоянной занятости, а регулярный рассчитан на 2–3 часа в вечернее время.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Достаточно ли только смартфона? <span style="color: var(--gold);">+</span></summary>
-            <p>Да, все базовые процессы и коммуникация полностью адаптированы под работу с телефона.</p>
+          <details class="faq-box>
+            <summary>Сложно ли совмещать с основной деятельностью? <span>+</span></summary>
+            <p>Совсем нет. Формат спроектирован так, чтобы уделять ему 2–3 часа в комфортное вечернее время со смартфона.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- КОНТАКТЫ -->
-    <section id="contact">
+    <!-- CONTACT CTA -->
+    <section style="border-bottom: none;">
       <div class="container">
-        <div class="benchmarks-box" style="text-align: center; padding: 56px 24px;">
-          <p class="eyebrow">07 / КОНТАКТЫ</p>
-          <h2>Готов обсудить свой формат в <span>NewCoast</span>?</h2>
-          <p class="lead" style="margin: 0 auto 28px;">Напиши в Telegram — проведем бесплатную консультацию и подберем оптимальный вариант старта.</p>
-          <a href="https://t.me/p2ppatrick" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Написать в Telegram →</a>
+        <div class="benchmarks-box" style="text-align: center; padding: 60px 24px;">
+          <div class="eyebrow">ЗАКРЫТЫЙ ДОСТУП</div>
+          <h2 style="font-family:'Cinzel',serif; margin-bottom:16px;">Готовы обсудить свой статус в <span>NewCoast</span>?</h2>
+          <p class="lead" style="margin: 0 auto 32px;">Напишите в Telegram — менеджер проведет индивидуальную консультацию и подберет персональный формат.</p>
+          <a href="https://t.me/p2ppatrick" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Связаться с менеджером →</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <div>
-        <strong>NEWCOAST</strong> · Партнёрские программы в финансовой вертикали
-      </div>
-      <div>
-        Информация на сайте не является публичной офертой. Условия и результаты индивидуальны.
-      </div>
+    <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center;">
+      <div><strong>NEWCOAST</strong> · Закрытая экосистема партнёрских программ</div>
+      <div>Информация носит ознакомительный характер. Не является публичной офертой.</div>
     </div>
   </footer>
 
   <script>
     const state = { time: null, exp: null, goal: null };
     const buttons = document.querySelectorAll('.quiz-option');
-    const resultBox = document.getElementById('quiz-result');
-    const resultTitle = document.getElementById('quiz-result-title');
-    const resultDesc = document.getElementById('quiz-result-desc');
-    const resultTgBtn = document.getElementById('quiz-tg-btn');
+    const output = document.getElementById('quiz-output');
+    const title = document.getElementById('quiz-title');
+    const desc = document.getElementById('quiz-desc');
+    const tgBtn = document.getElementById('quiz-tg-btn');
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const group = btn.parentElement;
-        const q = group.getAttribute('data-question');
-        group.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('active'));
+        const parent = btn.parentElement;
+        const q = parent.getAttribute('data-q');
+        parent.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         state[q] = btn.getAttribute('data-val');
 
         if (state.time && state.exp && state.goal) {
-          resultBox.classList.add('visible');
+          output.classList.add('visible');
+          const isOnce = state.time.includes('Разово') || state.goal.includes('Быстрая');
           let formatName = '';
-          if (state.time === 'once' || state.goal === 'fast') {
-            formatName = 'Разовый формат сотрудничества';
-            resultTitle.textContent = formatName;
-            resultDesc.textContent = 'Отличный вариант, чтобы познакомиться с механикой партнёрских программ NewCoast без постоянной занятости и получить первую выплату сразу после целевого действия.';
+          if (isOnce) {
+            formatName = 'Разовый формат';
+            title.textContent = 'Рекомендация: Разовый формат';
+            desc.textContent = 'Идеально подходит для быстрого старта, проверки механики и получения первой выплаты без регулярной загрузки.';
           } else {
-            formatName = 'Регулярный формат с сопровождением';
-            resultTitle.textContent = formatName;
-            resultDesc.textContent = 'Подходит для системного развития: 2–3 часа вечером, пошаговое обучение на практике и выход на целевые ориентиры от 100 000 ₽.';
+            formatName = 'Регулярный формат';
+            title.textContent = 'Рекомендация: Регулярный формат';
+            desc.textContent = 'Системное развитие по 2–3 часа вечером с куратором и выходом на целевые ориентиры от 100 000 ₽.';
           }
 
-          const msg = `Привет! Прошел подбор формата на сайте NewCoast:\n• Время: ${state.time}\n• Опыт: ${state.exp}\n• Цель: ${state.goal}\nИнтересует: ${formatName}. Хочу обсудить детали.`;
-          resultTgBtn.href = `https://t.me/p2ppatrick?text=${encodeURIComponent(msg)}`;
+          const msg = `Привет! Прошел подбор формата на сайте NewCoast:\n• Время: ${state.time}\n• Опыт: ${state.exp}\n• Цель: ${state.goal}\nИнтересует: ${formatName}. Готов обсудить детали.`;
+          tgBtn.href = `https://t.me/p2ppatrick?text=${encodeURIComponent(msg)}`;
         }
       });
     });
